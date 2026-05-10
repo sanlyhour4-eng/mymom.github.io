@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Happy Mother's Day</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="surprise-page">
+
+    <div class="surprise-card">
+
+      <div class="heart">
+        💖
+      </div>
+
+      <h1>
+        Happy Mother's Day
+      </h1>
+
+      <h2 id="momTitle"></h2>
+
+      <p id="showLetter"></p>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    const params =
+      new URLSearchParams(window.location.search);
+
+    const momName =
+      params.get("mom");
+
+    const letter =
+      params.get("letter");
+
+    if(momName && letter){
+
+      document.getElementById("momTitle").innerText =
+        "Dear " + momName + " 🌸";
+
+      document.getElementById("showLetter").innerText =
+        letter;
+
+    }
+
+  </script>
+
+</body>
+</html>
