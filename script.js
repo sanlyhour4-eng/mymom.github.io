@@ -14,7 +14,7 @@ function createSurprise(){
   }
 
   const surpriseLink =
-    "surprise.html?mom=" +
+    "https://sanlyhour4-eng.github.io/mymom.github.io/surprise.html?mom=" +
     encodeURIComponent(momName) +
     "&letter=" +
     encodeURIComponent(letter);
@@ -31,7 +31,28 @@ function createSurprise(){
 
     <br>
 
-    <a href="${surpriseLink}" target="_blank">
+    <input
+      type="text"
+      value="${surpriseLink}"
+      readonly
+      style="
+        width:100%;
+        padding:12px;
+        border-radius:10px;
+        border:none;
+        margin-bottom:15px;
+      "
+    >
+
+    <a
+      href="${surpriseLink}"
+      target="_blank"
+      style="
+        color:#ee6578;
+        font-weight:bold;
+        text-decoration:none;
+      "
+    >
       Open Surprise 💖
     </a>
   `;
